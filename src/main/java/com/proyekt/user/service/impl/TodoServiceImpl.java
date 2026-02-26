@@ -92,6 +92,7 @@ public class TodoServiceImpl implements ITodoService {
        Todo tododb = repositoryTodo.save(todo);
 
 
+       dtoTodo.setId(tododb.getId());
        dtoTodo.setCompleted(tododb.isCompleted());
        dtoTodo.setTitle(tododb.getTitle());
        dtoTodo.setUserId(tododb.getUser().getId());

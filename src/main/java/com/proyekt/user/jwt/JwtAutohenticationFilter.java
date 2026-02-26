@@ -58,7 +58,7 @@ public class JwtAutohenticationFilter extends OncePerRequestFilter {  // (8.0)
             username = jwtService.getUserNameByToken(token);  // burada token yoxlamaq ucun (4.0) a atir oda icinde (3.0) a isledir
 
             System.out.println("2");
-//            Object currentAuth = SecurityContextHolder.getContext().getAuthentication();
+           Object currentAuth = SecurityContextHolder.getContext().getAuthentication();
 
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null){
 

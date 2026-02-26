@@ -23,7 +23,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "firstName", unique = true, nullable = false)
+    @Column(name = "firstName",nullable = false)
     private String firstName;
 
     @Column(name = "lastName")
@@ -32,7 +32,7 @@ public class User implements UserDetails {
     @Column(name = "userName", unique = true, nullable = false)
     private String userName;
 
-    @Column(name = "password", unique = true, nullable = false)
+    @Column(name = "password", nullable = false)
     private String password;
 
     @Column(name = "email", unique = true, nullable = false)
