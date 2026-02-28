@@ -6,4 +6,6 @@ public interface IUserService {
 
 
     public DtoUser allList(String id,String userName);
+
+    public void updateProfileImage(Long userId, String imageUrl);
 }

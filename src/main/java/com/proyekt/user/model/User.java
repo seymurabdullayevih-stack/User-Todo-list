@@ -38,6 +38,9 @@ public class User implements UserDetails {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
+    @Column(name = "profile_image_url")
+    private String profileImageUrl;
+
     @OneToMany(mappedBy = "user")
     private List<Todo> todos;
 
@@ -48,6 +51,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
+
         return userName;
     }
 
