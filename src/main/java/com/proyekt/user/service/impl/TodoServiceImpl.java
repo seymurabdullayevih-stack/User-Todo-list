@@ -67,6 +67,7 @@ public class TodoServiceImpl implements ITodoService {
                 dtoTodo.setTitle(todo.getTitle());
                 dtoTodo.setUserId(todo.getUser().getId());
                 dtoTodo.setCompleted(todo.isCompleted());
+                dtoTodo.setImageTodoUrl(todo.getTodoImageUrl());
 
                 dtoTodos.add(dtoTodo);
 

@@ -12,8 +12,8 @@ import org.springframework.web.context.request.WebRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Date;
-
 @ControllerAdvice
+// Bütün Controller-lərdən gələn exception-ları mərkəzi yerdə tutur
 public class GlobalExceptionHandler {
 
 
