@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfigurationSource;
 
 @Configuration
 @EnableWebSecurity
@@ -34,6 +35,9 @@ public class SecurtiyConfig {
     @Autowired
     private AuthEntryPoint authEntryPoint;
 
+    @Autowired
+    private CorsConfigurationSource corsConfigurationSource;
+
     // Swagger endpoints
     public static final String[] SWAGGER_PATHS = {
             "/swagger-ui/**",
@@ -48,7 +52,9 @@ public class SecurtiyConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception { // bu methoda gelen adress filtire tabe deyil
 
-        http.csrf(csrf ->csrf.disable())
+        http
+                .cors(cors -> cors.configurationSource(corsConfigurationSource))
+                .csrf(csrf ->csrf.disable())
                 .authorizeHttpRequests(request ->
                         request.requestMatchers(AUTHENTICATE, REGISTER, REFRESH,S3).permitAll()
                                 .requestMatchers(
