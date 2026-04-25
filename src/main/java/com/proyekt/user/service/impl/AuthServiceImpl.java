@@ -73,7 +73,7 @@ public class AuthServiceImpl implements IAuthService {
     }
 
     @Override
-    public AuthResponse loginUserr(DtoLoginUser dtoLoginUser) {
+    public AuthResponse loginUser(DtoLoginUser dtoLoginUser) {
 
         AuthResponse authResponse = new AuthResponse();
 

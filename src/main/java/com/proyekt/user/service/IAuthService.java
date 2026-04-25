@@ -11,7 +11,7 @@ public interface IAuthService {
 
     public AuthResponse saveRegisterUser(DtoRegisterUser dtoRegisterUser);
 
-    public AuthResponse loginUserr(DtoLoginUser dtoLoginUser);
+    public AuthResponse loginUser(DtoLoginUser dtoLoginUser);
 
     public RefreshToken accessTokenSend(RefreshTokenRequest request);
 }
