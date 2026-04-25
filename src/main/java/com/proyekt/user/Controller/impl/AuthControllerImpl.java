@@ -31,7 +31,7 @@ public class AuthControllerImpl implements IAuthController {
     @Override
     @PostMapping(path = "/authenticate")
     public AuthResponse loginUser(@RequestBody DtoLoginUser dtoLoginUser) {
-        return authServicel.loginUser(dtoLoginUser);
+        return authServicel.loginUserr(dtoLoginUser);
     }
 
     @Override
